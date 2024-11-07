@@ -1,7 +1,7 @@
 
  **Supplier Management Portal**
 
-The **Supplier Management Portal** centralizes supplier information, performance metrics, and compliance tracking. Initially developed using a stack of Python Flask, React.js, Apache Superset, Airflow, Jupyter, and MariaDB, the system has since been updated to use Python Flask, React.js, Tableau, and in-memory data storage. This change enhances security by ensuring that no organizational data is stored permanently, thus maintaining privacy.
+The **Supplier Management Portal** centralizes supplier information, performance metrics, and compliance tracking. Initially developed using a stack of Python Flask, React.js, Apache Superset, Airflow, Jupyter, and MariaDB, the system has since been updated to use Python, Flask, React.js, Tableau, and in-memory data storage. This change enhances security by ensuring that no organizational data is stored permanently, thus maintaining privacy.
 
  Features
 
@@ -75,12 +75,7 @@ With your virtual environment activated, install the required packages for the p
 pip install Flask
 ```
 
-If the project has a `requirements.txt` file, you can install all dependencies at once by running:
-```bash
-pip install -r requirements.txt
-```
-
- **4. Clone the Repository (if applicable)**
+ **4. Clone the Repository**
 
 If the project is hosted on a GitHub repository, you can clone it to your local machine by running:
 ```bash
@@ -113,12 +108,3 @@ deactivate
 
 If you’d like to contribute to the development of the **Supplier Management Portal**, feel free to fork this repository and submit pull requests with your improvements or bug fixes. Please make sure to follow the standard coding practices and include relevant tests when applicable.
 
----
-
- **License**
-
-This project is open source and available under the [MIT License](LICENSE).
-
----
-
-This README provides a complete guide to set up and run the **Supplier Management Portal** locally, as well as additional information about the project’s features and how to contribute.
