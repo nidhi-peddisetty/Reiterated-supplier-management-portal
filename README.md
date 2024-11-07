@@ -1,8 +1,5 @@
-Here’s the content for your **README.md** file with setup instructions and the relevant details about the **Supplier Management Portal** project:
 
----
-
- Supplier Management Portal
+ **Supplier Management Portal**
 
 The **Supplier Management Portal** centralizes supplier information, performance metrics, and compliance tracking. Initially developed using a stack of Python Flask, React.js, Apache Superset, Airflow, Jupyter, and MariaDB, the system has since been updated to use Python Flask, React.js, Tableau, and in-memory data storage. This change enhances security by ensuring that no organizational data is stored permanently, thus maintaining privacy.
 
