@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supplier Search</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <script src="{{ url_for('static', filename='js/index.js') }}" defer></script>
+</head>
+<body>
+<header>Supplier Management Portal</header>
+
+<div class="flex-container">
+    <div class="container">
+        <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Prompcorp logo">
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/sup_search">Supplier Search</a></li>
+                <li><a href="/sup_induction">Supplier Inductions</a></li>
+                <li><a href="/metrics">Metrics</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="container2">
+        <div class="search-bar">
+            <form action="/sup_search" method="POST" class="search-form">
+                <input type="text" id="search-input" name="query" placeholder="Search...">
+                <button type="submit" id="search-button">Search</button>
+            </form>
+        </div>
+
+        {% if results %}
+        <div class="search-results">
+            <h2>Search Results:</h2>
+            <div class="results-list">
+                {% for result in results %}
+                <div class="result-entry">
+                    <div class="supplier-highlight">{{ result.business_name }}</div>
+                    <div class="address-highlight">{{ result.email }}</div>
+                    <div class="address-highlight">{{ result.phone }}</div>
+                    <button class="view-more-btn">View More</button>
+                    <div class="more-details details-hidden">
+                        <p>First Name: {{ result.first_name }}</p>
+                        <p>Last Name: {{ result.last_name }}</p>
+                        <p>External Reference: {{ result.external_ref }}</p>
+                        <p>Administrator: {{ result.administrator }}</p>
+                        <p>Finance Admin: {{ result.finance_admin }}</p>
+                        <p>Login: {{ result.login }}</p>
+                        <p>Operations Center Access: {{ result.ops_center_access }}</p>
+                        <p>Calendar: {{ result.calendar }}</p>
+                        <p>Skills: {{ result.skills }}</p>
+                        <p>Regions: {{ result.regions }}</p>
+                        <p>Segments: {{ result.segments }}</p>
+                        <p>Integration Reference: {{ result.integration_reference }}</p>
+                        <p>Primary Contact: {{ result.primary_contact }}</p>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% else %}
+        <p>Please enter a value or click search to display all results.</p>
+        {% endif %}
+    </div>
+</div>
+
+<script>
+    const buttons = document.querySelectorAll('.view-more-btn');
+    buttons.forEach(button => {
+        button.addEventListener('click', () => {
+            const moreDetails = button.nextElementSibling;
+            moreDetails.classList.toggle('details-hidden');
+            if (moreDetails.classList.contains('details-hidden')) {
+                button.textContent = 'View More';
+            } else {
+                button.textContent = 'View Less';
+            }
+        });
+    });
+</script>
+</body>
+</html>

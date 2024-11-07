@@ -1,0 +1,16 @@
+BUSINESSNAME,EMAIL,FIRSTNAME,LASTNAME,PHONE,EXTERNALREF,ADMINISTRATOR,FINANCEADMIN,LOGIN,OPSCENTERACCESS,CALENDAR,SKILLS,REGIONS,SEGMENTS,INTEGRATIONREFERENCE,PRIMARYCONTACT
+Tech Innovations Ltd.,tech@innovations.com,John,Smith,1234567890,TIL001,Yes,No,admin1,Yes,Yes,Python;Java,North America,Technology,INT123,Michael Lee
+Global Manufacturing Solutions,contact@globalmanufacturing.com,Jane,Doe,0987654321,GMS002,No,Yes,admin2,Yes,Yes,Excel;SQL,Europe,Manufacturing,INT456,Rebecca Green
+Green Earth Enterprises,info@greenearth.com,Charlie,Brown,1122334455,GEE003,Yes,Yes,admin3,No,No,Marketing;Logistics,Asia,Environmental,INT789,Liam Turner
+Creative Designs Co.,contact@creativedesigns.com,Alice,Johnson,2233445566,CDC004,No,No,admin4,Yes,No,Design;UX,South America,Design,INT101,Olivia Taylor
+NextGen Technologies,info@nextgen.com,Bob,Williams,3344556677,NGT005,Yes,No,admin5,Yes,Yes,Cloud Computing;AI,North America,Technology,INT202,David Clark
+Blue Ocean Industries,support@blueocean.com,Emily,Davis,4455667788,BOI006,No,Yes,admin6,No,Yes,Project Management;Logistics,Europe,Industrials,INT303,Sarah Adams
+Smart Solutions Consulting,contact@smartsolutions.com,Michael,Lee,5566778899,SSC007,Yes,Yes,admin7,Yes,Yes,Consulting;Technology,Asia,Consulting,INT404,James King
+Prime Builders Inc.,info@primebuilders.com,Linda,Martinez,6677889900,PBI008,No,Yes,admin8,No,No,Construction;Engineering,South America,Construction,INT505,Mia Hall
+Future Enterprises Ltd.,contact@futureenterprises.com,James,Garcia,7788990011,FEL009,Yes,No,admin9,Yes,Yes,Technology;Marketing,North America,Tech,INT606,Daniel Lee
+Elite Supplies & Logistics,support@elitesupplies.com,Emma,Moore,8899001122,ESL010,No,No,admin10,No,Yes,Logistics;Supply Chain,Europe,Logistics,INT707,Jack Harris
+Urban Growth Partners,contact@urbangrowth.com,Henry,White,9900112233,UGP011,Yes,Yes,admin11,Yes,No,Real Estate;Urban Planning,Asia,Real Estate,INT808,Noah Young
+Innovative Minds Solutions,info@innovativeminds.com,Oliver,Scott,1011122233,IMS012,No,Yes,admin12,Yes,Yes,Innovation;Tech,South America,Innovation,INT909,Chloe Perez
+Global Ventures Inc.,contact@globalventures.com,Isabella,Adams,1122334455,GVI013,Yes,No,admin13,No,Yes,Investment;Consulting,Europe,Investment,INT100,Lucas Carter
+Reliable Resources Group,info@reliableresources.com,Amelia,Evans,2233445566,BRG014,No,Yes,admin14,Yes,No,Supply Chain;Logistics,North America,Supply Chain,INT200,Daniel Lewis
+Pinnacle Technologies,contact@pinnacletech.com,Sophia,Roberts,3344556677,PTL015,Yes,No,admin15,Yes,Yes,AI;Software Development,Asia,Tech,INT300,Oliver Walker

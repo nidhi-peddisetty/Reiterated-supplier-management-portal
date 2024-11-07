@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask Web Interface</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <script src="{{ url_for('static', filename='js/sup_induction.js') }}" defer></script>
+</head>
+
+<body>
+<header>Prompcorp supplier management portal - Supplier Inductions</header>
+<div class="main-flex-container">
+    <div class="main-logo-container">
+        <div class="logo-wrapper">
+            <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Prompcorp logo">
+        </div>
+    </div>
+
+    <div class="main-content-container">
+        <div class="grid-layout-container">
+            <div class="grid-item-link">
+                <a href="/sup_search">Supplier Search</a>
+            </div>
+            <div class="grid-item-link">
+                <a href="/sup_induction">Supplier Inductions</a>
+            </div>
+            <div class="grid-item-link">
+                <a href="/metrics">Metrics</a>
+            </div>
+            <div class="grid-item-link">
+                <a href="/help_guides">Help Guides</a>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

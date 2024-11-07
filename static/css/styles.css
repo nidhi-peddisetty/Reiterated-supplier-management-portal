@@ -1,0 +1,366 @@
+
+html, body {
+    height: 100%;
+    margin: 0; 
+    padding: 0; 
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+header {
+    background-color: #000000;
+    color: #fff;
+    width: 100%;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+
+.navbar {
+  
+    color: #fff;
+    padding: 20px 40px;
+}
+
+.flex-container {
+    display: flex;
+    height: 100vh;
+}
+
+.container {
+    width: 20%; 
+    height: 100%; 
+    background-color: #eae8e4;
+}
+
+.container2 {
+    
+    flex-grow: 1; /* Make container2 grow to fill available space */
+    height: 100%; /* Set container2 height to 100% of its parent's height */
+}
+
+
+
+.search-bar {
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    background-color: #e66305; 
+}
+
+.search-bar input[type="text"] {
+width: 85%;   
+ padding: 10px;
+    font-size: 16px;
+    border: none; 
+    border-radius: 20px; /* Round the edges */
+    outline: none; 
+    margin-right: 10px;  
+}
+
+.search-bar button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none; 
+    border-radius: 20px; 
+    background-color: #000000; 
+    color: #fff; 
+    cursor: pointer; /* Add pointer cursor */
+    transition: background-color 0.3s; /* Add transition for smooth hover effect */
+}
+
+.search-bar button:hover {
+    background-color: #e1830a; 
+}
+
+
+
+
+.nav-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+.logo {
+    font-size: 24px; 
+    margin-bottom: 10px; 
+}
+
+.nav-links li {
+    margin-bottom: 10px; 
+    padding: 40px;
+}
+
+.nav-links li a {
+    color: #ce5200;
+    text-decoration: none;
+    font-size: 18px; 
+    text-align: center;
+}
+
+
+.navbar {
+    padding: 20px 20px; 
+    color: #fff;
+}
+img {
+    padding-left: 5%;
+    width: 80%;
+    height: auto;
+}
+
+.search-results h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.results-list {
+    margin-top: 20px;
+}
+
+.result-entry {
+    background-color: white;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.result-entry:hover {
+    background-color: #e1840a1f;
+}
+
+
+.supplier-highlight {
+    font-size: 24px;
+    font-weight: bold;
+    color: #e1830a;
+}
+
+.address-highlight {
+    font-size: 16px;
+    font-weight: normal;
+    color: #333;
+    margin-top: 5px;
+}
+
+/* View More Button */
+.view-more-btn {
+    margin-top: 10px;
+    background-color: #000000;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.view-more-btn:hover {
+    background-color: #e1830a;
+}
+
+
+.details-hidden {
+    display: none;
+}
+
+.details-visible {
+    display: block;
+}
+
+
+html, body {
+    height: 100%;
+    margin: 0; 
+    padding: 0; 
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+header {
+    background-color: #000000;
+    color: #fff;
+    width: 100%;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    font-size: 18px; 
+}
+
+.main-flex-container {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.main-logo-container {
+    width: 100%; 
+    height: auto;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    padding: 20px 0;
+    position: relative;
+    background-color: #eae8e4; 
+}
+
+.logo-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0; 
+    background-color: #eae8e4; 
+}
+
+img {
+    width: 150px;  
+    height: auto;
+    background-color: transparent; 
+    border-radius: 0;  
+}
+
+.main-content-container {
+    flex-grow: 1;
+    height: 100%;
+    background-color: #eae8e4;
+    padding-top: 30px; 
+    position: relative;
+}
+
+.grid-layout-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);  /* 2 columns */
+    gap: 20px;  /* Space between items */
+    margin-top: 20px;
+    width: 80%;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.grid-item-link {
+    background-color: #f1f1f1;
+    padding: 30px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.grid-item-link:hover {
+    background-color: #e1840a1f;  /* Slight color change on hover */
+    transform: scale(1.05);  /* Zoom effect on hover */
+}
+
+.grid-item-link a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.grid-item-link a:hover {
+    color: #e1830a;  /* Change text color on hover */
+}
+ /* Set the Tableau container to occupy full viewport height minus header */
+ .tableau-container {
+    width: 100%;
+    height: calc(100vh - 50px); /* Adjustment based on  header height */
+    position: relative;
+}
+
+.tableauPlaceholder {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.tableauViz {
+    width: 100%;
+    height: 100%;
+}
+        .table-container {
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        #supplierTable {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        #supplierTable th, #supplierTable td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        #supplierTable th {
+            background-color: #f2f2f2;
+        }
+
+        .search-bar-i {
+            align-items: center;
+    padding: 20px;
+    width: 100%;
+    background-color: #e66305; 
+}
+
+.search-bar-i input[type="text"] {
+    width: 83%;   
+ padding: 10px;
+    font-size: 16px;
+    border: none; 
+    border-radius: 20px; 
+    outline: none; 
+    margin-right: 10px;  
+}
+
+.search-bar-i .filter-icon {
+    font-size: 30px; 
+    cursor: pointer;
+    margin-left: 10px; }
+
+.dropdown-menu {
+    position: absolute;
+    top: 50px;
+    right: 20px; 
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: none;
+    width: 400px; 
+}
+
+.dropdown-menu.show {
+    display: block;
+}
+
+.dropdown-menu .close-btn {
+    font-size: 20px;
+    cursor: pointer;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+.checkbox-container {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column; /* Stack checkboxes vertically */
+}
+.checkbox-container label {
+    display: flex;
+    align-items: center; 
+    margin-bottom: 10px; 
+}
+
+.checkbox-container input {
+    margin-bottom: 10px; 
+}

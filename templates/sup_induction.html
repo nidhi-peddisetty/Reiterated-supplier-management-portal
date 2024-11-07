@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompcorp Supplier Induction Portal</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <script src="{{ url_for('static', filename='js/sup_induction.js') }}" defer></script>
+    <style>
+
+    </style>
+</head>
+<body>
+
+<header>Prompcorp Supplier Management Portal - Supplier Inductions</header>
+
+<div class="flex-container">
+    <div class="container">
+        <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Prompcorp logo">
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/sup_search">Supplier Search</a></li>
+                <li><a href="/sup_induction">Supplier Inductions</a></li>
+                <li><a href="/metrics">Metrics</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="container2">
+        <div class="search-filter-container">
+            <div class="search-bar-i">
+                <input type="text" placeholder="Search by Business Name..." id="searchInput" oninput="filterTable()">
+                <span class="filter-icon" onclick="toggleDropdown()">&#9881;</span> <!-- Filter icon -->
+            </div>
+        
+            <div class="dropdown-menu" id="filterDropdown">
+                <span class="close-btn" onclick="closeDropdown()">&#10005;</span>
+                <strong>Filter by License Type</strong>
+                <div class="checkbox-container">
+                    <label for="gasFitterCheckbox">
+                        <input type="checkbox" id="gasFitterCheckbox" checked onclick="filterTable()"> Gas Fitter License
+                    </label>
+                    <label for="buildingPractitionerCheckbox">
+                        <input type="checkbox" id="buildingPractitionerCheckbox" checked onclick="filterTable()"> Building Practitioner License
+                    </label>
+                    <label for="electricalContractorCheckbox">
+                        <input type="checkbox" id="electricalContractorCheckbox" checked onclick="filterTable()"> Electrical Contractor License
+                    </label>
+                    <label for="plumbingCheckbox">
+                        <input type="checkbox" id="plumbingCheckbox" checked onclick="filterTable()"> Plumbing License
+                    </label>
+                </div>
+                
+            </div>
+        </div>
+        
+
+
+        <div class="table-container">
+            <table id="supplierTable">
+                <thead>
+                    <tr>
+                        <th>Business Name</th>
+                        <th>Supplier Contact</th>
+                        <th>License Type</th>
+                        <th>License Expiry Date</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for supplier in suppliers %}
+                    <tr class="supplier-row">
+                        <td>{{ supplier.business_name }}</td>
+                        <td>{{ supplier.email }}</td>
+                        <td>{{ supplier.license_type }}</td>
+                        <td>{{ supplier.expiry_date }}</td>
+                        <td>{{ supplier.status }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Toggle dropdown visibility
+    function toggleDropdown() {
+        const dropdown = document.getElementById("filterDropdown");
+        dropdown.classList.toggle("show");
+    }
+
+    // Close the dropdown
+    function closeDropdown() {
+        const dropdown = document.getElementById("filterDropdown");
+        dropdown.classList.remove("show");
+    }
+
+    // Filter function to apply based on search input and filter options
+    function filterTable() {
+        const searchInput = document.getElementById("searchInput").value.toLowerCase();
+        const rows = document.querySelectorAll("#supplierTable tbody tr");
+
+        const selectedLicenses = [];
+        if (document.getElementById("gasFitterCheckbox").checked) selectedLicenses.push('Gas Fitter License');
+        if (document.getElementById("buildingPractitionerCheckbox").checked) selectedLicenses.push('Building Practitioner License');
+        if (document.getElementById("electricalContractorCheckbox").checked) selectedLicenses.push('Electrical Contractor License');
+        if (document.getElementById("plumbingCheckbox").checked) selectedLicenses.push('Plumbing License');
+
+        const isAnyLicenseSelected = selectedLicenses.length > 0;
+
+        rows.forEach(row => {
+            const businessName = row.cells[0].textContent.toLowerCase();
+            const licenseType = row.cells[2].textContent.toLowerCase();
+            const isSearchMatch = businessName.includes(searchInput);
+            const isLicenseMatch = !isAnyLicenseSelected || selectedLicenses.some(license => licenseType.includes(license.toLowerCase()));
+
+            if (isSearchMatch && isLicenseMatch) {
+                row.style.display = "";
+            } else {
+                row.style.display = "none";
+            }
+        });
+    }
+</script>
+
+</body>
+</html>
